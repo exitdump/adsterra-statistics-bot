@@ -272,7 +272,7 @@ bot.onText(/Balance/, async (msg) => {
 
   if(!hasApi(userId)) return;
 
-  bot.sendMessage(chatId, 'Comming Soon... ami abir');
+  bot.sendMessage(chatId, 'Comming Soon...');
 })
 
 
