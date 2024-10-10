@@ -1,0 +1,1 @@
+# adsterra-statistics-bot
