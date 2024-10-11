@@ -1,11 +1,17 @@
 require('dotenv').config();
+const express = require('express');
+const app = express();
+
+
+
+
 const TelegramBot = require('node-telegram-bot-api');
 const axios = require('axios');
 const fs = require('fs');
 const path = './users.json';
-
 const Adsterra = require('./adsterra.js')
 
+const PORT = process.env.PORT || 3000;  // Use the environment-provided port or fallback to 3000
 // Access the token and API key from environment variables
 const TELEGRAM_TOKEN = process.env.TELEGRAM_BOT_TOKEN;                               console.log(TELEGRAM_TOKEN);                        
 
@@ -481,3 +487,7 @@ function showGuestMenu() {
   }
   return options
 }
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
